@@ -5,33 +5,43 @@
 //  Created by ishwar lal janwa on 27/01/20.
 //  Copyright © 2020 MindIdeology. All rights reserved.
 //
-
+//com.nakodaji
 import UIKit
 import CoreData
+import Alamofire
+import IQKeyboardManagerSwift
+import Kingfisher
+import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    var loginUser : LoginUser?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.toolbarTintColor = ColorOrange
+        initiateRootVC(animated: false)
+        
+        //TODO: Firebase configuration
+                
+        let pushManager = PushNotificationManager()
+        pushManager.registerForPushNotifications()
+        pushManager.delegate = self
+        
+        if let userInfo = CUserDefaults.value(forKey: UserDefaultLoginUserData) {
+            loginUser = LoginUser(object: userInfo)
+        }
+        
+        window.backgroundColor = .white
+        window.makeKeyAndVisible()
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
 
     // MARK: - Core Data stack
 
@@ -80,3 +90,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+    
+    func initiateRootVC(animated: Bool) {
+        
+        let rootVC = UINavigationController.init(rootViewController: CMain_SB.instantiateViewController(withIdentifier: "HomeVC"))
+        
+        self.setWindowRootViewController(rootVC: rootVC, animated: animated, completion: nil)
+    }
+    
+    func setWindowRootViewController(rootVC:UIViewController?, animated:Bool, completion: ((Bool) -> Void)?) {
+        
+        guard rootVC != nil else {
+            return
+        }
+        
+        UIApplication.shared.sendAction(#selector(resignFirstResponder), to: nil, from: nil, for: nil)
+        
+        UIView.transition(with: self.window, duration: animated ? 0.6 : 0.0, options: .transitionCrossDissolve, animations: {
+            
+            let oldState = UIView.areAnimationsEnabled
+            UIView.setAnimationsEnabled(false)
+            
+            self.window.rootViewController = rootVC
+            UIView.setAnimationsEnabled(oldState)
+        }) { (finished) in
+            if let handler = completion {
+                handler(true)
+            }
+        }
+    }
+}
+
+
+
+
+extension AppDelegate : PushNotificationManagerDelegate {
+    
+    func didReceiveRegistrationToken(_ token: String) {
+        CUserDefaults.set(token, forKey: UserDefaultDeviceToken)
+        CUserDefaults.synchronize()
+        
+        APIRequest.shared.updateDeviceToken(param: ["user_id": loginUser?.id ?? "0"], successCompletion: { (complition) in
+            
+        }) { (error) in
+            
+        }
+    }
+}

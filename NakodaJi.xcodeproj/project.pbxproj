@@ -3,19 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		463DC33BC5485B5661B8E0A9 /* Pods_NakodaJi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75A3546626C027E083B987D /* Pods_NakodaJi.framework */; };
+		51D8B119656CAE832387AE61 /* Pods_NakodaJi_NakodaJiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D977D6DE3FAD590CC1BAAF43 /* Pods_NakodaJi_NakodaJiUITests.framework */; };
+		621754911895B13AA28488A2 /* Pods_NakodaJiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA226976524BACE0E8598AE3 /* Pods_NakodaJiTests.framework */; };
+		7014C99D23E9E8FD0049292B /* BookingCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C99C23E9E8FD0049292B /* BookingCollView.swift */; };
+		7014C9A123E9EF430049292B /* bus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7014C9A023E9EF430049292B /* bus.jpg */; };
+		7014C9A323E9F8240049292B /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9A223E9F8240049292B /* ExtensionUITextField.swift */; };
+		7014C9A523E9FFF20049292B /* MonthYearTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9A423E9FFF20049292B /* MonthYearTxtField.swift */; };
+		7014C9AD23EB28E60049292B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9A723EB28E60049292B /* APIRequest.swift */; };
+		7014C9AE23EB28E60049292B /* ApplicationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9A823EB28E60049292B /* ApplicationConfig.swift */; };
+		7014C9AF23EB28E60049292B /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9A923EB28E60049292B /* ApplicationConstants.swift */; };
+		7014C9B023EB28E60049292B /* ApplicationMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9AA23EB28E60049292B /* ApplicationMessages.swift */; };
+		7014C9B423EB2AEA0049292B /* ExtensionUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014C9B323EB2AEA0049292B /* ExtensionUIApplication.swift */; };
 		7043B2BD23DF42C200A876D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2BC23DF42C200A876D4 /* AppDelegate.swift */; };
-		7043B2BF23DF42C200A876D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2BE23DF42C200A876D4 /* SceneDelegate.swift */; };
-		7043B2C123DF42C200A876D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2C023DF42C200A876D4 /* ViewController.swift */; };
 		7043B2C423DF42C200A876D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2C223DF42C200A876D4 /* Main.storyboard */; };
 		7043B2C723DF42C200A876D4 /* NakodaJi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2C523DF42C200A876D4 /* NakodaJi.xcdatamodeld */; };
 		7043B2C923DF42C600A876D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2C823DF42C600A876D4 /* Assets.xcassets */; };
 		7043B2CC23DF42C600A876D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2CA23DF42C600A876D4 /* LaunchScreen.storyboard */; };
 		7043B2D723DF42C600A876D4 /* NakodaJiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2D623DF42C600A876D4 /* NakodaJiTests.swift */; };
 		7043B2E223DF42C700A876D4 /* NakodaJiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2E123DF42C700A876D4 /* NakodaJiUITests.swift */; };
+		7043B2F023DF441600A876D4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2EF23DF441600A876D4 /* HomeVC.swift */; };
+		7043B2F223DF446E00A876D4 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2F123DF446E00A876D4 /* AppConstant.swift */; };
+		7043B2F423DF46DA00A876D4 /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B2F323DF46DA00A876D4 /* ParentVC.swift */; };
+		7043B2FB23DF49F700A876D4 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2F623DF49F700A876D4 /* NotoSans-Bold.ttf */; };
+		7043B2FC23DF49F700A876D4 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2F723DF49F700A876D4 /* NotoSans-BoldItalic.ttf */; };
+		7043B2FD23DF49F700A876D4 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2F823DF49F700A876D4 /* NotoSans-Italic.ttf */; };
+		7043B2FE23DF49F700A876D4 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2F923DF49F700A876D4 /* NotoSans-Regular.ttf */; };
+		7043B2FF23DF49F700A876D4 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7043B2FA23DF49F700A876D4 /* SIL Open Font License.txt */; };
+		7043B30123DF52DE00A876D4 /* nakodaji1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7043B30023DF52DE00A876D4 /* nakodaji1.jpg */; };
+		7043B30323DF538400A876D4 /* HomeBannerCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B30223DF538400A876D4 /* HomeBannerCollView.swift */; };
+		7043B30523DF5A1400A876D4 /* MenuCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B30423DF5A1400A876D4 /* MenuCollView.swift */; };
+		7043B30723DF656900A876D4 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B30623DF656900A876D4 /* GenericView.swift */; };
+		7043B30C23E0A9FB00A876D4 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B30B23E0A9FB00A876D4 /* NewsVC.swift */; };
+		7043B30E23E0AA7400A876D4 /* NewsTblView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B30D23E0AA7400A876D4 /* NewsTblView.swift */; };
+		7043B31123E0AF4200A876D4 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043B31023E0AF4200A876D4 /* ExtensionDictionary.swift */; };
+		7045081823E1FD8C00E958B3 /* BhajanTblView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045081723E1FD8C00E958B3 /* BhajanTblView.swift */; };
+		7053987823E204F600273259 /* VolunteersTblView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053987723E204F600273259 /* VolunteersTblView.swift */; };
+		7053987A23E20D3900273259 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053987923E20D3900273259 /* ExtensionViewController.swift */; };
+		70E0EF8223E0B4CA00C58E7E /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0EF8123E0B4C900C58E7E /* BookingVC.swift */; };
+		70E0EF8423E0B57100C58E7E /* VolunteersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0EF8323E0B57100C58E7E /* VolunteersVC.swift */; };
+		70E0EF8623E0B5E600C58E7E /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0EF8523E0B5E600C58E7E /* GalleryVC.swift */; };
+		70E0EF8823E0B66800C58E7E /* BhajanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0EF8723E0B66800C58E7E /* BhajanVC.swift */; };
+		70E0EF8A23E0BE2D00C58E7E /* ProgramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0EF8923E0BE2D00C58E7E /* ProgramVC.swift */; };
+		70E0EF8C23E0C08E00C58E7E /* GalleryCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0EF8B23E0C08E00C58E7E /* GalleryCollView.swift */; };
+		70E6058423EB450100EDBB88 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6058323EB450100EDBB88 /* LoginUser.swift */; };
+		70E6058623EB452F00EDBB88 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6058523EB452F00EDBB88 /* SwiftyJSON.swift */; };
+		70E6058923EC7B0C00EDBB88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E6058823EC7B0C00EDBB88 /* GoogleService-Info.plist */; };
+		70E6058C23EC836900EDBB88 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6058B23EC836900EDBB88 /* PushNotificationManager.swift */; };
+		70E6058E23EC92E000EDBB88 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6058D23EC92E000EDBB88 /* Trip.swift */; };
+		70E6059023EC990F00EDBB88 /* PassengerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6058F23EC990F00EDBB88 /* PassengerVC.swift */; };
+		70E6059223EC998300EDBB88 /* PassengerTblView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6059123EC998300EDBB88 /* PassengerTblView.swift */; };
+		70E6059423EC9D7400EDBB88 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6059323EC9D7400EDBB88 /* Passenger.swift */; };
+		70E6059923EDE9F900EDBB88 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E6059823EDE9F900EDBB88 /* splash.png */; };
+		70E6059B23EDEEE400EDBB88 /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6059A23EDEEE400EDBB88 /* Volunteer.swift */; };
+		70F1B5E223EB398100083E4B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F1B5E123EB398100083E4B /* LoginVC.swift */; };
+		70F1B5E523EB3D0900083E4B /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F1B5E423EB3D0900083E4B /* LoginTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +82,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		318A2F2FCB2C8A8E8A061D96 /* Pods-NakodaJi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NakodaJi.release.xcconfig"; path = "Target Support Files/Pods-NakodaJi/Pods-NakodaJi.release.xcconfig"; sourceTree = "<group>"; };
+		3E5B680BE4510DECEE8038B2 /* Pods-NakodaJiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NakodaJiTests.release.xcconfig"; path = "Target Support Files/Pods-NakodaJiTests/Pods-NakodaJiTests.release.xcconfig"; sourceTree = "<group>"; };
+		6C5B38387A0035A65972D6A4 /* Pods-NakodaJi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NakodaJi.debug.xcconfig"; path = "Target Support Files/Pods-NakodaJi/Pods-NakodaJi.debug.xcconfig"; sourceTree = "<group>"; };
+		7014C99C23E9E8FD0049292B /* BookingCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCollView.swift; sourceTree = "<group>"; };
+		7014C9A023E9EF430049292B /* bus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bus.jpg; sourceTree = "<group>"; };
+		7014C9A223E9F8240049292B /* ExtensionUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUITextField.swift; sourceTree = "<group>"; };
+		7014C9A423E9FFF20049292B /* MonthYearTxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearTxtField.swift; sourceTree = "<group>"; };
+		7014C9A723EB28E60049292B /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		7014C9A823EB28E60049292B /* ApplicationConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConfig.swift; sourceTree = "<group>"; };
+		7014C9A923EB28E60049292B /* ApplicationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
+		7014C9AA23EB28E60049292B /* ApplicationMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationMessages.swift; sourceTree = "<group>"; };
+		7014C9B323EB2AEA0049292B /* ExtensionUIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIApplication.swift; sourceTree = "<group>"; };
 		7043B2B923DF42C200A876D4 /* NakodaJi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NakodaJi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7043B2BC23DF42C200A876D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7043B2BE23DF42C200A876D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7043B2C023DF42C200A876D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7043B2C323DF42C200A876D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7043B2C623DF42C200A876D4 /* NakodaJi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NakodaJi.xcdatamodel; sourceTree = "<group>"; };
 		7043B2C823DF42C600A876D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +107,49 @@
 		7043B2DD23DF42C700A876D4 /* NakodaJiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NakodaJiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7043B2E123DF42C700A876D4 /* NakodaJiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NakodaJiUITests.swift; sourceTree = "<group>"; };
 		7043B2E323DF42C700A876D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7043B2EF23DF441600A876D4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7043B2F123DF446E00A876D4 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		7043B2F323DF46DA00A876D4 /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
+		7043B2F623DF49F700A876D4 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		7043B2F723DF49F700A876D4 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7043B2F823DF49F700A876D4 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		7043B2F923DF49F700A876D4 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		7043B2FA23DF49F700A876D4 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		7043B30023DF52DE00A876D4 /* nakodaji1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nakodaji1.jpg; sourceTree = "<group>"; };
+		7043B30223DF538400A876D4 /* HomeBannerCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollView.swift; sourceTree = "<group>"; };
+		7043B30423DF5A1400A876D4 /* MenuCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollView.swift; sourceTree = "<group>"; };
+		7043B30623DF656900A876D4 /* GenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
+		7043B30B23E0A9FB00A876D4 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		7043B30D23E0AA7400A876D4 /* NewsTblView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTblView.swift; sourceTree = "<group>"; };
+		7043B31023E0AF4200A876D4 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
+		7045081723E1FD8C00E958B3 /* BhajanTblView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhajanTblView.swift; sourceTree = "<group>"; };
+		7053987723E204F600273259 /* VolunteersTblView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersTblView.swift; sourceTree = "<group>"; };
+		7053987923E20D3900273259 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		70E0EF8123E0B4C900C58E7E /* BookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingVC.swift; sourceTree = "<group>"; };
+		70E0EF8323E0B57100C58E7E /* VolunteersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersVC.swift; sourceTree = "<group>"; };
+		70E0EF8523E0B5E600C58E7E /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		70E0EF8723E0B66800C58E7E /* BhajanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhajanVC.swift; sourceTree = "<group>"; };
+		70E0EF8923E0BE2D00C58E7E /* ProgramVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramVC.swift; sourceTree = "<group>"; };
+		70E0EF8B23E0C08E00C58E7E /* GalleryCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollView.swift; sourceTree = "<group>"; };
+		70E6058323EB450100EDBB88 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		70E6058523EB452F00EDBB88 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		70E6058823EC7B0C00EDBB88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70E6058A23EC7DC800EDBB88 /* NakodaJi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NakodaJi.entitlements; sourceTree = "<group>"; };
+		70E6058B23EC836900EDBB88 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		70E6058D23EC92E000EDBB88 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		70E6058F23EC990F00EDBB88 /* PassengerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerVC.swift; sourceTree = "<group>"; };
+		70E6059123EC998300EDBB88 /* PassengerTblView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerTblView.swift; sourceTree = "<group>"; };
+		70E6059323EC9D7400EDBB88 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		70E6059823EDE9F900EDBB88 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		70E6059A23EDEEE400EDBB88 /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
+		70F1B5E123EB398100083E4B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		70F1B5E423EB3D0900083E4B /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		763EBA2D19C88249A261A57F /* Pods-NakodaJi-NakodaJiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NakodaJi-NakodaJiUITests.debug.xcconfig"; path = "Target Support Files/Pods-NakodaJi-NakodaJiUITests/Pods-NakodaJi-NakodaJiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4C8EEA67F85A6C0FA9C2444 /* Pods-NakodaJiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NakodaJiTests.debug.xcconfig"; path = "Target Support Files/Pods-NakodaJiTests/Pods-NakodaJiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA226976524BACE0E8598AE3 /* Pods_NakodaJiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NakodaJiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C719ADB3EBD68FC319FE81EF /* Pods-NakodaJi-NakodaJiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NakodaJi-NakodaJiUITests.release.xcconfig"; path = "Target Support Files/Pods-NakodaJi-NakodaJiUITests/Pods-NakodaJi-NakodaJiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D977D6DE3FAD590CC1BAAF43 /* Pods_NakodaJi_NakodaJiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NakodaJi_NakodaJiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75A3546626C027E083B987D /* Pods_NakodaJi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NakodaJi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463DC33BC5485B5661B8E0A9 /* Pods_NakodaJi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621754911895B13AA28488A2 /* Pods_NakodaJiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +173,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D8B119656CAE832387AE61 /* Pods_NakodaJi_NakodaJiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1463B2A1864D373AED38B945 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C5B38387A0035A65972D6A4 /* Pods-NakodaJi.debug.xcconfig */,
+				318A2F2FCB2C8A8E8A061D96 /* Pods-NakodaJi.release.xcconfig */,
+				763EBA2D19C88249A261A57F /* Pods-NakodaJi-NakodaJiUITests.debug.xcconfig */,
+				C719ADB3EBD68FC319FE81EF /* Pods-NakodaJi-NakodaJiUITests.release.xcconfig */,
+				B4C8EEA67F85A6C0FA9C2444 /* Pods-NakodaJiTests.debug.xcconfig */,
+				3E5B680BE4510DECEE8038B2 /* Pods-NakodaJiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7014C99E23E9E9120049292B /* BookingVC */ = {
+			isa = PBXGroup;
+			children = (
+				70E0EF8123E0B4C900C58E7E /* BookingVC.swift */,
+				7014C99C23E9E8FD0049292B /* BookingCollView.swift */,
+				7014C9A423E9FFF20049292B /* MonthYearTxtField.swift */,
+			);
+			path = BookingVC;
+			sourceTree = "<group>";
+		};
+		7014C99F23E9EB810049292B /* VolunteersVC */ = {
+			isa = PBXGroup;
+			children = (
+				70E0EF8323E0B57100C58E7E /* VolunteersVC.swift */,
+				7053987723E204F600273259 /* VolunteersTblView.swift */,
+			);
+			path = VolunteersVC;
+			sourceTree = "<group>";
+		};
+		7014C9A623EB28E60049292B /* ServiceAndConfig */ = {
+			isa = PBXGroup;
+			children = (
+				7014C9A723EB28E60049292B /* APIRequest.swift */,
+				7014C9A823EB28E60049292B /* ApplicationConfig.swift */,
+				7014C9A923EB28E60049292B /* ApplicationConstants.swift */,
+				7014C9AA23EB28E60049292B /* ApplicationMessages.swift */,
+			);
+			path = ServiceAndConfig;
+			sourceTree = "<group>";
+		};
 		7043B2B023DF42C200A876D4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +230,8 @@
 				7043B2D523DF42C600A876D4 /* NakodaJiTests */,
 				7043B2E023DF42C700A876D4 /* NakodaJiUITests */,
 				7043B2BA23DF42C200A876D4 /* Products */,
+				1463B2A1864D373AED38B945 /* Pods */,
+				97D05E58C99948105C1FB2FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +248,28 @@
 		7043B2BB23DF42C200A876D4 /* NakodaJi */ = {
 			isa = PBXGroup;
 			children = (
+				70E6058A23EC7DC800EDBB88 /* NakodaJi.entitlements */,
 				7043B2BC23DF42C200A876D4 /* AppDelegate.swift */,
-				7043B2BE23DF42C200A876D4 /* SceneDelegate.swift */,
-				7043B2C023DF42C200A876D4 /* ViewController.swift */,
 				7043B2C223DF42C200A876D4 /* Main.storyboard */,
-				7043B2C823DF42C600A876D4 /* Assets.xcassets */,
 				7043B2CA23DF42C600A876D4 /* LaunchScreen.storyboard */,
+				7043B2C823DF42C600A876D4 /* Assets.xcassets */,
 				7043B2CD23DF42C600A876D4 /* Info.plist */,
 				7043B2C523DF42C200A876D4 /* NakodaJi.xcdatamodeld */,
+				70E6058823EC7B0C00EDBB88 /* GoogleService-Info.plist */,
+				70E6058723EB458600EDBB88 /* DataModel */,
+				7014C9A623EB28E60049292B /* ServiceAndConfig */,
+				7043B30A23E0A99A00A876D4 /* Resource */,
+				7043B30923E0A98300A876D4 /* Common */,
+				7043B30823E0A94C00A876D4 /* HomeVC */,
+				7043B30F23E0AA8100A876D4 /* NewsVC */,
+				7014C99E23E9E9120049292B /* BookingVC */,
+				70E6059523EDDB5D00EDBB88 /* PassengerVC */,
+				7014C99F23E9EB810049292B /* VolunteersVC */,
+				70E0EF8D23E0C59700C58E7E /* GalleryVC */,
+				7045081923E1FDB900E958B3 /* BhajanVC */,
+				70E0EF8923E0BE2D00C58E7E /* ProgramVC.swift */,
+				70F1B5E323EB3CF000083E4B /* LoginVC */,
+				70E6058B23EC836900EDBB88 /* PushNotificationManager.swift */,
 			);
 			path = NakodaJi;
 			sourceTree = "<group>";
@@ -131,6 +292,120 @@
 			path = NakodaJiUITests;
 			sourceTree = "<group>";
 		};
+		7043B2F523DF49F700A876D4 /* noto-sans */ = {
+			isa = PBXGroup;
+			children = (
+				7043B2F623DF49F700A876D4 /* NotoSans-Bold.ttf */,
+				7043B2F723DF49F700A876D4 /* NotoSans-BoldItalic.ttf */,
+				7043B2F823DF49F700A876D4 /* NotoSans-Italic.ttf */,
+				7043B2F923DF49F700A876D4 /* NotoSans-Regular.ttf */,
+				7043B2FA23DF49F700A876D4 /* SIL Open Font License.txt */,
+			);
+			path = "noto-sans";
+			sourceTree = "<group>";
+		};
+		7043B30823E0A94C00A876D4 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				7043B2EF23DF441600A876D4 /* HomeVC.swift */,
+				7043B30223DF538400A876D4 /* HomeBannerCollView.swift */,
+				7043B30423DF5A1400A876D4 /* MenuCollView.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		7043B30923E0A98300A876D4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7043B2F123DF446E00A876D4 /* AppConstant.swift */,
+				7043B30623DF656900A876D4 /* GenericView.swift */,
+				7043B2F323DF46DA00A876D4 /* ParentVC.swift */,
+				7043B31023E0AF4200A876D4 /* ExtensionDictionary.swift */,
+				7053987923E20D3900273259 /* ExtensionViewController.swift */,
+				7014C9A223E9F8240049292B /* ExtensionUITextField.swift */,
+				7014C9B323EB2AEA0049292B /* ExtensionUIApplication.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7043B30A23E0A99A00A876D4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7043B30023DF52DE00A876D4 /* nakodaji1.jpg */,
+				7014C9A023E9EF430049292B /* bus.jpg */,
+				70E6059823EDE9F900EDBB88 /* splash.png */,
+				7043B2F523DF49F700A876D4 /* noto-sans */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7043B30F23E0AA8100A876D4 /* NewsVC */ = {
+			isa = PBXGroup;
+			children = (
+				7043B30B23E0A9FB00A876D4 /* NewsVC.swift */,
+				7043B30D23E0AA7400A876D4 /* NewsTblView.swift */,
+			);
+			path = NewsVC;
+			sourceTree = "<group>";
+		};
+		7045081923E1FDB900E958B3 /* BhajanVC */ = {
+			isa = PBXGroup;
+			children = (
+				70E0EF8723E0B66800C58E7E /* BhajanVC.swift */,
+				7045081723E1FD8C00E958B3 /* BhajanTblView.swift */,
+			);
+			path = BhajanVC;
+			sourceTree = "<group>";
+		};
+		70E0EF8D23E0C59700C58E7E /* GalleryVC */ = {
+			isa = PBXGroup;
+			children = (
+				70E0EF8523E0B5E600C58E7E /* GalleryVC.swift */,
+				70E0EF8B23E0C08E00C58E7E /* GalleryCollView.swift */,
+			);
+			path = GalleryVC;
+			sourceTree = "<group>";
+		};
+		70E6058723EB458600EDBB88 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				70E6058523EB452F00EDBB88 /* SwiftyJSON.swift */,
+				70E6058323EB450100EDBB88 /* LoginUser.swift */,
+				70E6058D23EC92E000EDBB88 /* Trip.swift */,
+				70E6059323EC9D7400EDBB88 /* Passenger.swift */,
+				70E6059A23EDEEE400EDBB88 /* Volunteer.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		70E6059523EDDB5D00EDBB88 /* PassengerVC */ = {
+			isa = PBXGroup;
+			children = (
+				70E6058F23EC990F00EDBB88 /* PassengerVC.swift */,
+				70E6059123EC998300EDBB88 /* PassengerTblView.swift */,
+			);
+			path = PassengerVC;
+			sourceTree = "<group>";
+		};
+		70F1B5E323EB3CF000083E4B /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				70F1B5E123EB398100083E4B /* LoginVC.swift */,
+				70F1B5E423EB3D0900083E4B /* LoginTextField.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		97D05E58C99948105C1FB2FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E75A3546626C027E083B987D /* Pods_NakodaJi.framework */,
+				D977D6DE3FAD590CC1BAAF43 /* Pods_NakodaJi_NakodaJiUITests.framework */,
+				BA226976524BACE0E8598AE3 /* Pods_NakodaJiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +413,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7043B2E623DF42C700A876D4 /* Build configuration list for PBXNativeTarget "NakodaJi" */;
 			buildPhases = (
+				50EC4A537C0E33525D190D15 /* [CP] Check Pods Manifest.lock */,
 				7043B2B523DF42C200A876D4 /* Sources */,
 				7043B2B623DF42C200A876D4 /* Frameworks */,
 				7043B2B723DF42C200A876D4 /* Resources */,
+				6D57F27FADC68D376C35129B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +432,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7043B2E923DF42C700A876D4 /* Build configuration list for PBXNativeTarget "NakodaJiTests" */;
 			buildPhases = (
+				23877E5764C5667408D54FB3 /* [CP] Check Pods Manifest.lock */,
 				7043B2CE23DF42C600A876D4 /* Sources */,
 				7043B2CF23DF42C600A876D4 /* Frameworks */,
 				7043B2D023DF42C600A876D4 /* Resources */,
@@ -173,9 +451,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7043B2EC23DF42C700A876D4 /* Build configuration list for PBXNativeTarget "NakodaJiUITests" */;
 			buildPhases = (
+				0BDD13CD58337EEEF4B793C4 /* [CP] Check Pods Manifest.lock */,
 				7043B2D923DF42C600A876D4 /* Sources */,
 				7043B2DA23DF42C600A876D4 /* Frameworks */,
 				7043B2DB23DF42C600A876D4 /* Resources */,
+				7853B122A778B9A0FB8E9164 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,9 +515,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7043B2FB23DF49F700A876D4 /* NotoSans-Bold.ttf in Resources */,
 				7043B2CC23DF42C600A876D4 /* LaunchScreen.storyboard in Resources */,
+				7043B2FC23DF49F700A876D4 /* NotoSans-BoldItalic.ttf in Resources */,
+				7043B2FF23DF49F700A876D4 /* SIL Open Font License.txt in Resources */,
+				70E6059923EDE9F900EDBB88 /* splash.png in Resources */,
+				70E6058923EC7B0C00EDBB88 /* GoogleService-Info.plist in Resources */,
+				7043B2FD23DF49F700A876D4 /* NotoSans-Italic.ttf in Resources */,
+				7014C9A123E9EF430049292B /* bus.jpg in Resources */,
+				7043B30123DF52DE00A876D4 /* nakodaji1.jpg in Resources */,
 				7043B2C923DF42C600A876D4 /* Assets.xcassets in Resources */,
 				7043B2C423DF42C200A876D4 /* Main.storyboard in Resources */,
+				7043B2FE23DF49F700A876D4 /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,15 +546,152 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BDD13CD58337EEEF4B793C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NakodaJi-NakodaJiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23877E5764C5667408D54FB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NakodaJiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50EC4A537C0E33525D190D15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NakodaJi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D57F27FADC68D376C35129B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NakodaJi/Pods-NakodaJi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NakodaJi/Pods-NakodaJi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NakodaJi/Pods-NakodaJi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7853B122A778B9A0FB8E9164 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NakodaJi-NakodaJiUITests/Pods-NakodaJi-NakodaJiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NakodaJi-NakodaJiUITests/Pods-NakodaJi-NakodaJiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NakodaJi-NakodaJiUITests/Pods-NakodaJi-NakodaJiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7043B2B523DF42C200A876D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7043B2C123DF42C200A876D4 /* ViewController.swift in Sources */,
+				7014C99D23E9E8FD0049292B /* BookingCollView.swift in Sources */,
+				70E0EF8223E0B4CA00C58E7E /* BookingVC.swift in Sources */,
+				7043B30E23E0AA7400A876D4 /* NewsTblView.swift in Sources */,
+				7043B30523DF5A1400A876D4 /* MenuCollView.swift in Sources */,
+				7014C9B023EB28E60049292B /* ApplicationMessages.swift in Sources */,
+				7014C9AF23EB28E60049292B /* ApplicationConstants.swift in Sources */,
+				70E6059023EC990F00EDBB88 /* PassengerVC.swift in Sources */,
+				7043B2F023DF441600A876D4 /* HomeVC.swift in Sources */,
+				7043B31123E0AF4200A876D4 /* ExtensionDictionary.swift in Sources */,
+				70E0EF8623E0B5E600C58E7E /* GalleryVC.swift in Sources */,
+				70F1B5E523EB3D0900083E4B /* LoginTextField.swift in Sources */,
+				7014C9A323E9F8240049292B /* ExtensionUITextField.swift in Sources */,
+				70E6058623EB452F00EDBB88 /* SwiftyJSON.swift in Sources */,
+				70E6058423EB450100EDBB88 /* LoginUser.swift in Sources */,
+				7014C9B423EB2AEA0049292B /* ExtensionUIApplication.swift in Sources */,
+				7043B30323DF538400A876D4 /* HomeBannerCollView.swift in Sources */,
+				70E0EF8C23E0C08E00C58E7E /* GalleryCollView.swift in Sources */,
 				7043B2BD23DF42C200A876D4 /* AppDelegate.swift in Sources */,
+				7043B30723DF656900A876D4 /* GenericView.swift in Sources */,
+				70E6058C23EC836900EDBB88 /* PushNotificationManager.swift in Sources */,
+				70E6059423EC9D7400EDBB88 /* Passenger.swift in Sources */,
+				7043B2F423DF46DA00A876D4 /* ParentVC.swift in Sources */,
+				70F1B5E223EB398100083E4B /* LoginVC.swift in Sources */,
+				70E0EF8823E0B66800C58E7E /* BhajanVC.swift in Sources */,
+				70E6059B23EDEEE400EDBB88 /* Volunteer.swift in Sources */,
+				7014C9A523E9FFF20049292B /* MonthYearTxtField.swift in Sources */,
+				70E0EF8A23E0BE2D00C58E7E /* ProgramVC.swift in Sources */,
+				7045081823E1FD8C00E958B3 /* BhajanTblView.swift in Sources */,
+				70E6059223EC998300EDBB88 /* PassengerTblView.swift in Sources */,
 				7043B2C723DF42C200A876D4 /* NakodaJi.xcdatamodeld in Sources */,
-				7043B2BF23DF42C200A876D4 /* SceneDelegate.swift in Sources */,
+				7014C9AE23EB28E60049292B /* ApplicationConfig.swift in Sources */,
+				70E0EF8423E0B57100C58E7E /* VolunteersVC.swift in Sources */,
+				7053987A23E20D3900273259 /* ExtensionViewController.swift in Sources */,
+				7043B2F223DF446E00A876D4 /* AppConstant.swift in Sources */,
+				7043B30C23E0A9FB00A876D4 /* NewsVC.swift in Sources */,
+				7014C9AD23EB28E60049292B /* APIRequest.swift in Sources */,
+				70E6058E23EC92E000EDBB88 /* Trip.swift in Sources */,
+				7053987823E204F600273259 /* VolunteersTblView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,16 +862,22 @@
 		};
 		7043B2E723DF42C700A876D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5B38387A0035A65972D6A4 /* Pods-NakodaJi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = NakodaJi/NakodaJi.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H49YGX523Z;
 				INFOPLIST_FILE = NakodaJi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NakodaJi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bubbleeasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = BubbleEasy_Dev_8_Oct_2019;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,16 +885,22 @@
 		};
 		7043B2E823DF42C700A876D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 318A2F2FCB2C8A8E8A061D96 /* Pods-NakodaJi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = NakodaJi/NakodaJi.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H49YGX523Z;
 				INFOPLIST_FILE = NakodaJi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NakodaJi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bubbleeasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = BubbleEasy_Dev_8_Oct_2019;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,6 +908,7 @@
 		};
 		7043B2EA23DF42C700A876D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C8EEA67F85A6C0FA9C2444 /* Pods-NakodaJiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +930,7 @@
 		};
 		7043B2EB23DF42C700A876D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E5B680BE4510DECEE8038B2 /* Pods-NakodaJiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +952,7 @@
 		};
 		7043B2ED23DF42C700A876D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 763EBA2D19C88249A261A57F /* Pods-NakodaJi-NakodaJiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +972,7 @@
 		};
 		7043B2EE23DF42C700A876D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C719ADB3EBD68FC319FE81EF /* Pods-NakodaJi-NakodaJiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
