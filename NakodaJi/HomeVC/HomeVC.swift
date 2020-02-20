@@ -9,12 +9,23 @@
 import UIKit
 
 class HomeVC: ParentVC {
-
+    
     @IBOutlet weak var bannerCollView : HomeBannerCollView!
     @IBOutlet weak var menuCollView : MenuCollView!{
         didSet{
             menuCollView.menuDelegate = self
         }
+    }
+    @IBOutlet weak var lblTitle : UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLoad() {
@@ -46,17 +57,9 @@ class HomeVC: ParentVC {
                        ["icon":"date_icon",
                         "title":"Program Detail",
                         "type":"program"]]
-        
-       /* let arrMenu = [["icon":"news_icon",
-                        "title":"News",
-                        "type":"news"],
-                       ["icon":"booking_icon",
-                        "title":"Booking Detail",
-                        "type":"booking"]] */
-        
+                
         menuCollView.arrMenu = arrMenu
         menuCollView.reloadData()
-        
     }
 }
 
@@ -96,8 +99,8 @@ extension HomeVC : MenuCollViewDelegate {
             if appDelegate?.loginUser != nil {
                 
                 if let bookingVC = CMain_SB.instantiateViewController(withIdentifier:"BookingVC") as? BookingVC {
-                     self.navigationController?.pushViewController(bookingVC, animated: true)
-                 }
+                    self.navigationController?.pushViewController(bookingVC, animated: true)
+                }
             }else if let loginVC = CMain_SB.instantiateViewController(withIdentifier:"LoginVC") as? LoginVC {
                 loginVC.delegate = self
                 
@@ -105,7 +108,7 @@ extension HomeVC : MenuCollViewDelegate {
                 navigation.modalPresentationStyle = .fullScreen
                 self.present(navigation, animated: true, completion: nil)
             }
-             
+            
             
         case "program":
             
@@ -129,5 +132,24 @@ extension HomeVC : LoginDelegate {
         if let bookingVC = CMain_SB.instantiateViewController(withIdentifier:"BookingVC") as? BookingVC {
             self.navigationController?.pushViewController(bookingVC, animated: true)
         }
+    }
+}
+
+extension HomeVC :  UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        var alpha = (scrollView.contentOffset.y / 44 * 100) / 100
+        
+        if alpha > 1.0 {
+            alpha = 1.0
+        }
+        
+        if alpha > 0.5 {
+            self.lblTitle.textColor = ColorWhite_FFFFFF
+        }else {
+            self.lblTitle.textColor = ColorOrange
+        }
+        self.lblTitle.backgroundColor = CRGBA(r: 239, g: 104, b: 55, a: alpha)
     }
 }

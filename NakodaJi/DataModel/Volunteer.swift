@@ -20,6 +20,7 @@ public final class Volunteer {
         static let salutation = "salutation"
         static let mobileNo = "mobileno"
         static let phoneCode = "phone_code"
+        static let image = "image"
         
     }
     
@@ -31,6 +32,7 @@ public final class Volunteer {
     public var firstName : String?
     public var lastName : String?
     public var salutation : String?
+    public var image : String?
     public var id : String?
     public var mobileNo : String = ""
     public var phoneCode : String = ""
@@ -58,6 +60,7 @@ public final class Volunteer {
         salutation = json[SerializationKeys.salutation].stringValue
         mobileNo = json[SerializationKeys.mobileNo].stringValue
         phoneCode = json[SerializationKeys.phoneCode].stringValue
+        image = json[SerializationKeys.image].stringValue
         
         fullContact = ""
         

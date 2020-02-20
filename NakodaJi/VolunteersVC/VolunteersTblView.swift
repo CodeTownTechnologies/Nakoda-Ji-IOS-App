@@ -88,6 +88,7 @@ class VolunteersTblViewCell: UITableViewCell {
         lblName.text = passenger.fullName?.capitalized
         lblContact.text = "(M.) \(passenger.fullContact)"
         contactNo = passenger.fullContact.replacingOccurrences(of: "-", with: "")
+        imgProfile.kf_setImageWithURL(passenger.image)
     }
     private func callNumber(phoneNumber:String) {
 

@@ -10,6 +10,7 @@ import UIKit
 
 class NewsTblView: UITableView {
     var isHideNoDataFound : Bool = true
+    
     var arrNotification : [[String : Any]] = [] {
         didSet {
             isHideNoDataFound = false
@@ -38,7 +39,8 @@ extension NewsTblView : UITableViewDelegate, UITableViewDataSource {
             }
         }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTblViewCell") as? NewsTblViewCell {
-            
+            cell.lblTitle.text = arrNotification[indexPath.row].valueForString(key: "description")
+            cell.lblDate.text = ""
             return cell
         }
         return UITableViewCell()

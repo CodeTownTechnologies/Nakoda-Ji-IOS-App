@@ -21,15 +21,16 @@ class HomeBannerCollView: UICollectionView {
 
 extension HomeBannerCollView : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: CScreenWidth, height: CScreenWidth/2)
+        return CGSize(width: CScreenWidth, height: CScreenWidth * 0.5628019324)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCollCell", for: indexPath) as? BannerCollCell {
+            cell.imgView.image = UIImage(named: "banner\(indexPath.row + 1).jpg")
             return cell
         }
         return UICollectionViewCell()

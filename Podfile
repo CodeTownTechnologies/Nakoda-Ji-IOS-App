@@ -10,6 +10,8 @@ target 'NakodaJi' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'PKHUD'
+  pod 'Kingfisher'
+
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
 

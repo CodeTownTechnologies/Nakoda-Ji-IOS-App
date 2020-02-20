@@ -23,29 +23,18 @@ class GalleryVC: ParentVC {
     
     fileprivate func initialize(){
         self.title = "Gallery"
-        configureMenu()
+//        configureMenu()
+        getGalleryList()
     }
     
     func configureMenu() {
         let arrMenu = [["icon":"nakodaji1.jpg",
                         "title":"Images",
                         "type":"volunteers"],
-                       ["icon":"splash.png",
+                       ["icon":"splash.jpg",
                         "title":"Images",
                         "type":"gallery"],
-                       ["icon":"splash.png",
-                        "title":"Images",
-                        "type":"gallery"],
-                       ["icon":"nakodaji1.jpg",
-                        "title":"Images",
-                        "type":"volunteers"],
-                       ["icon":"nakodaji1.jpg",
-                        "title":"Images",
-                        "type":"volunteers"],
-                       ["icon":"splash.png",
-                        "title":"Images",
-                        "type":"gallery"],
-                       ["icon":"splash.png",
+                       ["icon":"splash.jpg",
                         "title":"Images",
                         "type":"gallery"],
                        ["icon":"nakodaji1.jpg",
@@ -54,10 +43,10 @@ class GalleryVC: ParentVC {
                        ["icon":"nakodaji1.jpg",
                         "title":"Images",
                         "type":"volunteers"],
-                       ["icon":"splash.png",
+                       ["icon":"splash.jpg",
                         "title":"Images",
                         "type":"gallery"],
-                       ["icon":"splash.png",
+                       ["icon":"splash.jpg",
                         "title":"Images",
                         "type":"gallery"],
                        ["icon":"nakodaji1.jpg",
@@ -66,10 +55,22 @@ class GalleryVC: ParentVC {
                        ["icon":"nakodaji1.jpg",
                         "title":"Images",
                         "type":"volunteers"],
-                       ["icon":"splash.png",
+                       ["icon":"splash.jpg",
                         "title":"Images",
                         "type":"gallery"],
-                       ["icon":"splash.png",
+                       ["icon":"splash.jpg",
+                        "title":"Images",
+                        "type":"gallery"],
+                       ["icon":"nakodaji1.jpg",
+                        "title":"Images",
+                        "type":"volunteers"],
+                       ["icon":"nakodaji1.jpg",
+                        "title":"Images",
+                        "type":"volunteers"],
+                       ["icon":"splash.jpg",
+                        "title":"Images",
+                        "type":"gallery"],
+                       ["icon":"splash.jpg",
                         "title":"Images",
                         "type":"gallery"],
                        ["icon":"nakodaji1.jpg",
@@ -85,8 +86,50 @@ class GalleryVC: ParentVC {
     }
 }
 
+// MARK:
+// MARK: - Web services
+extension GalleryVC {
+    
+    fileprivate func getGalleryList(){
+        
+        APIRequest.shared.getGalleryList(param: [:], successCompletion: { (response) in
+            if let res = response as? [String : Any],
+                let arrData = res[CJsonData] as? [[String : Any]]{
+                self.collView.arrDataSource = arrData
+//                self.collView.arrDataSource = []
+            }else{
+                self.collView.arrDataSource = []
+            }
+        }) { (error) in
+            self.collView.arrDataSource = []
+        }
+    }
+    
+    fileprivate func getGalleryImages(_ info : [String : Any]) {
+        
+        APIRequest.shared.getGalleryImaage(param: ["id":info.valueForString(key: "id")], successCompletion: { (response) in
+            if let res = response as? [String : Any],
+                let arrData = res[CJsonData] as? [[String : Any]], !arrData.isEmpty{
+                
+                if let imagePreviewVC = CMain_SB.instantiateViewController(withIdentifier:"ImagePreviewVC") as? ImagePreviewVC {
+                    imagePreviewVC.arrImage = arrData
+                   imagePreviewVC.modalPresentationStyle = .fullScreen
+                    self.present(imagePreviewVC, animated: false, completion: nil)
+                }
+            }else{
+                self.showAlertView("Data not found", completion: nil)
+            }
+            
+        }) { (error) in
+            
+        }
+    }
+}
+
 extension GalleryVC : GalleryCollViewDelegate{
+    
     func collView(_ collView: UICollectionView, didSelectItemAt indexPath: IndexPath, info dict: [String : Any]) {
         
+        self.getGalleryImages(dict)
     }
 }

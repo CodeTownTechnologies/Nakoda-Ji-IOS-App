@@ -68,4 +68,9 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
         print(response)
         completionHandler()
     }
+    
+    // This method will be called when app received push notifications in foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
 }

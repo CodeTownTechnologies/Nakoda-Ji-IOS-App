@@ -16,9 +16,7 @@ let CScreenSize = CBounds.size
 let CScreenWidth = CScreenSize.width
 let CScreenHeight = CScreenSize.height
 
-
 let CMain_SB                 = UIStoryboard(name: "Main", bundle: nil)
-
 
 let ColorBlack_000000           = CRGB(r: 0, g: 0, b: 0)
 let ColorWhite_FFFFFF           = CRGB(r: 255, g: 255, b: 255)
@@ -50,9 +48,10 @@ public enum CFontType:Int {
     case SemiBold
     case SemiBoldItalic
     case Italic
+    case Light
+    case Medium
     case Regular
 }
-
 
 
 func CFontNotoSans(size: CGFloat, type: CFontType) -> UIFont {
@@ -70,6 +69,27 @@ func CFontNotoSans(size: CGFloat, type: CFontType) -> UIFont {
         
     default :
         return UIFont.init(name: "NotoSans-Regular", size: size)!
+    }
+}
+
+func CFontPoppins(size: CGFloat, type: CFontType) -> UIFont {
+    
+    switch type {
+        
+//    case .Bold:
+//        return UIFont.init(name: "Poppins-Bold", size: size)!
+        
+    case .Light:
+        return UIFont.init(name: "Poppins-Light", size: size)!
+        
+    case .Medium:
+        return UIFont.init(name: "Poppins-Medium", size: size)!
+        
+    case .Bold, .SemiBold:
+        return UIFont.init(name: "Poppins-SemiBold", size: size)!
+        
+    default :
+        return UIFont.init(name: "Poppins-Regular", size: size)!
     }
 }
 

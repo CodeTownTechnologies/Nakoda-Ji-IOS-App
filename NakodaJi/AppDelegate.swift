@@ -42,6 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
+    }
 
     // MARK: - Core Data stack
 
@@ -87,7 +90,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 
 
@@ -139,3 +141,4 @@ extension AppDelegate : PushNotificationManagerDelegate {
         }
     }
 }
+

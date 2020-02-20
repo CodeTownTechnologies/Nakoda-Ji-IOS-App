@@ -46,7 +46,7 @@ extension PassengerVC {
                 self.tblView.arrPassener = []
             }
         }) { (error) in
-            
+            self.tblView.arrPassener = []
         }
     }
 }

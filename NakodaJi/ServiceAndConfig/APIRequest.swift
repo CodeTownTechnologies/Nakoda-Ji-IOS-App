@@ -18,6 +18,12 @@ let  CAPIGetStaffList = "get_staff_list"
 let  CAPIGetTripsList = "get_trips_list"
 let  CAPIGetPassengerList = "get_passenger_list"
 let  CAPIUpdateDeviceToken = "update_device_token"
+let  CAPIGetNewsList = "get_news_list"
+let  CAPIGetBhajanList = "get_bhajan_list"
+let  CAPIGetGalleryList = "get_gallery_list"
+let  CAPIGetGalleryImages = "get_gallery_images"
+let  CAPIGetProgramDetail = "get_program_detail"
+
 
 ///... USER DETAIL
 let  CAPIUserDetail =  "get_profile_data"
@@ -369,8 +375,7 @@ extension APIRequest {
         var param = param
         param["methodName"] = CAPIGetStaffList
         param["device_type"] = "ios"
-        
-        HUD.show(.labeledRotatingImage(image: UIImage(named: "progress"), title: "", subtitle: ""))
+        HUD.show(.systemActivity)
         _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
             HUD.hide()
             if self.checkAPIStatus(response: response, showAlert: false) {
@@ -395,7 +400,7 @@ extension APIRequest {
         param["methodName"] = CAPILogin
         param["device_type"] = "ios"
         
-        HUD.show(.labeledRotatingImage(image: UIImage(named: "progress"), title: "", subtitle: ""))
+        HUD.show(.systemActivity)
         _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
             HUD.hide()
             if self.checkAPIStatus(response: response, showAlert: true) {
@@ -415,7 +420,7 @@ extension APIRequest {
         var param = param
         param["methodName"] = CAPIGetTripsList
         param["device_type"] = "ios"
-        HUD.show(.labeledRotatingImage(image: UIImage(named: "progress"), title: "", subtitle: ""))
+        HUD.show(.systemActivity)
         
         _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
             HUD.hide()
@@ -438,7 +443,7 @@ extension APIRequest {
         var param = param
         param["methodName"] = CAPIGetPassengerList
         param["device_type"] = "ios"
-        HUD.show(.labeledRotatingImage(image: UIImage(named: "progress"), title: "", subtitle: ""))
+        HUD.show(.systemActivity)
         _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
             HUD.hide()
             if self.checkAPIStatus(response: response, showAlert: true) {
@@ -462,7 +467,97 @@ extension APIRequest {
         param["device_type"] = "ios"
         param["device_token"] = CUserDefaults.value(forKey: UserDefaultDeviceToken)
         
-        //HUD.show(.labeledRotatingImage(image: UIImage(named: "progress"), title: "", subtitle: ""))
+//        HUD.show(.systemActivity)
+        _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
+            HUD.hide()
+            if self.checkAPIStatus(response: response, showAlert: true) {
+                successCompletion(response)
+            }
+        }, failureCompletion: { (error) in
+            HUD.hide()
+            self.failureWithError(error, showAlert: true)
+            failureCompletion?(error)
+        })
+    }
+    
+    func getNewsList(param:[String:Any] , successCompletion:@escaping successCompletion, failureCompletion:failureCompletion?)  {
+        
+        var param = param
+        param["methodName"] = CAPIGetNewsList
+        param["device_type"] = "ios"
+        HUD.show(.systemActivity)
+        _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
+            HUD.hide()
+            if self.checkAPIStatus(response: response, showAlert: true) {
+                successCompletion(response)
+            }
+        }, failureCompletion: { (error) in
+            HUD.hide()
+            self.failureWithError(error, showAlert: true)
+            failureCompletion?(error)
+        })
+    }
+    
+    func getBhajanList(param:[String:Any] , successCompletion:@escaping successCompletion, failureCompletion:failureCompletion?)  {
+        
+        var param = param
+        param["methodName"] = CAPIGetBhajanList
+        param["device_type"] = "ios"
+        HUD.show(.systemActivity)
+        _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
+            HUD.hide()
+            if self.checkAPIStatus(response: response, showAlert: true) {
+                successCompletion(response)
+            }
+        }, failureCompletion: { (error) in
+            HUD.hide()
+            self.failureWithError(error, showAlert: true)
+            failureCompletion?(error)
+        })
+    }
+    
+    func getGalleryList(param:[String:Any] , successCompletion:@escaping successCompletion, failureCompletion:failureCompletion?)  {
+        
+        var param = param
+        param["methodName"] = CAPIGetGalleryList
+        param["device_type"] = "ios"
+        HUD.show(.systemActivity)
+        _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
+            HUD.hide()
+            if self.checkAPIStatus(response: response, showAlert: true) {
+                successCompletion(response)
+            }
+        }, failureCompletion: { (error) in
+            HUD.hide()
+            self.failureWithError(error, showAlert: true)
+            failureCompletion?(error)
+        })
+    }
+    
+    func getGalleryImaage(param:[String:Any] , successCompletion:@escaping successCompletion, failureCompletion:failureCompletion?)  {
+        
+        var param = param
+        param["methodName"] = CAPIGetGalleryImages
+        param["device_type"] = "ios"
+        HUD.show(.systemActivity)
+        _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
+            HUD.hide()
+            if self.checkAPIStatus(response: response, showAlert: true) {
+                successCompletion(response)
+            }
+        }, failureCompletion: { (error) in
+            HUD.hide()
+            self.failureWithError(error, showAlert: true)
+            failureCompletion?(error)
+        })
+    }
+    
+    func getProgramDetails(param:[String:Any] , successCompletion:@escaping successCompletion, failureCompletion:failureCompletion?)  {
+        
+        var param = param
+        param["methodName"] = CAPIGetProgramDetail
+        param["device_type"] = "ios"
+        HUD.show(.systemActivity)
         _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
             HUD.hide()
             if self.checkAPIStatus(response: response, showAlert: true) {

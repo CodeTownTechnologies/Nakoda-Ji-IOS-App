@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>759520617947-r7ljl59lntkpcgcdbf9pt3p12s9c2gjh.apps.googleusercontent.com</string>
+	<string>849435912086-a7no2th2mknsehfbg1fupbdekkbhndd7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.759520617947-r7ljl59lntkpcgcdbf9pt3p12s9c2gjh</string>
+	<string>com.googleusercontent.apps.849435912086-a7no2th2mknsehfbg1fupbdekkbhndd7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB5QjWxRibc_0yiqM7G81Vs6Wxuul8mpfE</string>
+	<string>AIzaSyD_8A1yuwEbUr3TLO63bvQiwWmc5Mk_yyU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>759520617947</string>
+	<string>849435912086</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.bubbleeasy</string>
+	<string>com.nakodaji</string>
 	<key>PROJECT_ID</key>
-	<string>bubbleeasy-8b8cd</string>
+	<string>nakodaji-9a33a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bubbleeasy-8b8cd.appspot.com</string>
+	<string>nakodaji-9a33a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:759520617947:ios:d606bd5fd99f26649d73fe</string>
+	<string>1:849435912086:ios:7ce46741fd2291bdea1fb7</string>
 	<key>DATABASE_URL</key>
-	<string>https://bubbleeasy-8b8cd.firebaseio.com</string>
+	<string>https://nakodaji-9a33a.firebaseio.com</string>
 </dict>
 </plist>

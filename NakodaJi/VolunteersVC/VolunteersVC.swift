@@ -38,7 +38,7 @@ extension VolunteersVC {
                 self.tblView.arrVolunteer = []
             }
         }) { (error) in
-            
+            self.tblView.arrVolunteer = []
         }
     }
 }
