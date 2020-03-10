@@ -66,7 +66,12 @@ class ImagePreviewCollCell: UICollectionViewCell {
         if let `data` = data as? [String : Any] {
 //            imgView.image = UIImage(named: (index % 2 == 0) ? "nakodaji1.jpg" : "splash.jpg")
 //            imgView.kf_setImage(data.valueForString(key: "file"))
-            imgView.kf_setImageWithURL(data.valueForString(key: "file"))
+            if !data.valueForString(key: "file").isEmpty {
+                imgView.kf_setImageWithURL(data.valueForString(key: "file"))
+            }else {
+                imgView.kf_setImageWithURL(data.valueForString(key: "image"))
+            }
+            
 //            imgView.image = UIImage(named: data["icon"] as? String ?? "")
         }
     }

@@ -51,8 +51,8 @@ class LoginVC: ParentVC {
     }
     
     @IBAction fileprivate func btnLoginClicked(_ sender : UIButton) {
-        txtEmail.text = "himanshug@yopmail.com"
-        txtPassword.text = "demo@nakoda"
+//        txtEmail.text = "himanshug@yopmail.com"
+//        txtPassword.text = "demo@nakoda"
         
         if isValidationPassed() {
             let param : [String : Any] = ["email":txtEmail.text ?? "",

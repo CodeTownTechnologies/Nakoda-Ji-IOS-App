@@ -112,9 +112,28 @@ extension HomeVC : MenuCollViewDelegate {
             
         case "program":
             
-            if let programVC = CMain_SB.instantiateViewController(withIdentifier:"ProgramVC") as? ProgramVC {
-                self.navigationController?.pushViewController(programVC, animated: true)
+//            if let programVC = CMain_SB.instantiateViewController(withIdentifier:"ProgramVC") as? ProgramVC {
+//                self.navigationController?.pushViewController(programVC, animated: true)
+//            }
+            
+            APIRequest.shared.getProgramDetails(param: [:], successCompletion: { (response) in
+                if let res = response as? [String : Any],
+                    let arrImage = res[CJsonData] as? [[String : Any]]{
+                    
+                    if let imagePreviewVC = CMain_SB.instantiateViewController(withIdentifier:"ImagePreviewVC") as? ImagePreviewVC {
+                                       imagePreviewVC.arrImage = arrImage
+                                      imagePreviewVC.modalPresentationStyle = .fullScreen
+                                       self.present(imagePreviewVC, animated: false, completion: nil)
+                                   }
+                    
+                }else{
+                    self.showAlertView("Data not found", completion: nil)
+                }
+            }) { (error) in
+                
+                self.showAlertView(error?.localizedDescription ?? "Something went wrong", title: "", completion: nil)
             }
+
             
         default:
             break

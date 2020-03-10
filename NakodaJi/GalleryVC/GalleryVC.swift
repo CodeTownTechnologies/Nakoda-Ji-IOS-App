@@ -96,7 +96,6 @@ extension GalleryVC {
             if let res = response as? [String : Any],
                 let arrData = res[CJsonData] as? [[String : Any]]{
                 self.collView.arrDataSource = arrData
-//                self.collView.arrDataSource = []
             }else{
                 self.collView.arrDataSource = []
             }

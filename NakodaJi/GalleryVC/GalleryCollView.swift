@@ -85,8 +85,9 @@ class GalleryCollCell: UICollectionViewCell {
         if let `data` = data as? [String : Any] {
             
 //            imgView.image = UIImage(named: data["icon"] as? String ?? "")
-            imgView.image = UIImage(named: (index % 2 == 0) ? "nakodaji1.jpg" : "splash.jpg")
+//            imgView.image = UIImage(named: (index % 2 == 0) ? "nakodaji1.jpg" : "splash.jpg")
             lblTitle.text = data.valueForString(key: "title")
+            imgView.kf_setImageWithURL(data.valueForString(key: "image"))          
         }
     }
 }

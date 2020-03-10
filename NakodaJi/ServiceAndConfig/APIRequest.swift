@@ -20,6 +20,8 @@ let  CAPIGetPassengerList = "get_passenger_list"
 let  CAPIUpdateDeviceToken = "update_device_token"
 let  CAPIGetNewsList = "get_news_list"
 let  CAPIGetBhajanList = "get_bhajan_list"
+let  CAPIGetBhajan = "get_bhajan"
+
 let  CAPIGetGalleryList = "get_gallery_list"
 let  CAPIGetGalleryImages = "get_gallery_images"
 let  CAPIGetProgramDetail = "get_program_detail"
@@ -502,6 +504,24 @@ extension APIRequest {
         
         var param = param
         param["methodName"] = CAPIGetBhajanList
+        param["device_type"] = "ios"
+        HUD.show(.systemActivity)
+        _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in
+            HUD.hide()
+            if self.checkAPIStatus(response: response, showAlert: true) {
+                successCompletion(response)
+            }
+        }, failureCompletion: { (error) in
+            HUD.hide()
+            self.failureWithError(error, showAlert: true)
+            failureCompletion?(error)
+        })
+    }
+    
+    func getBhajan(param:[String:Any] , successCompletion:@escaping successCompletion, failureCompletion:failureCompletion?)  {
+        
+        var param = param
+        param["methodName"] = CAPIGetBhajan
         param["device_type"] = "ios"
         HUD.show(.systemActivity)
         _ = POST(apiURL: BASEURL, param: param, successCompletion: { (response) in

@@ -27,11 +27,14 @@ class BhajanDetailsPageVC: ParentPageVC {
 //            return
 //        }
         
-        guard let arrString = details?.components(withMaxLength: 600) else {
+        guard let details = details else {
             return
         }
+//        guard let arrString = details?.components(withMaxLength: 600) else {
+//            return
+//        }
         
-        self.arrOrderVC = arrString.map({self.newBhajanDetailsVC($0)})
+        self.arrOrderVC = [details].map({self.newBhajanDetailsVC($0)})
         
         if let firstViewController = arrOrderVC.first {
             setViewControllers([firstViewController],
